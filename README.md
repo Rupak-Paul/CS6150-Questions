@@ -10,7 +10,7 @@ In this assignment, you are required to implement serialization and deserializat
 - Class **`Student`** contains only `string` variables, making its serialization straightforward.
 - Class **`Course`** contains variables of different data types: `string`, `int`, and `float`, requiring a more elaborate serialization method.
 
-## Serialization of `Student`:
+## Serialization of Student:
 The `Student` class contains the following `string` variables:
 - `name`
 - `rollNumber`
@@ -59,7 +59,7 @@ $ -> 00100100
 2 -> 00110010
 4 -> 00110100
 ```
-3. The final binary output will be:
+3. The final binary output after serialization will be:
 ```
 0100000101101100011010010110001101100101001001000100001101010011001100100011010001001101001100010010010000110001001101000010111100110001001100000010111100110010001100000011001000110100
 ```
@@ -82,7 +82,7 @@ A, l, i, c, e, $, C, S, 2, 4, M, 1, $, 1, 4, /, 1, 0, /, 2, 0, 2, 4
 Alice CS24M1 14/10/2024
 ```
 
-## Serialization of `Course`:
+## Serialization of Course:
 The `Course` class contains the following variables:
 - `string ID`
 - `int noOfRegisteredStudents` (4 bytes)
