@@ -201,7 +201,7 @@ CS6150 60 63.5
 ```
 
 ## Template
-You can use the following C++ template to implement serialization and deserialization for the `Student` and `Course` classes. Feel free to modify it as needed.
+You can use the following template to implement serialization and deserialization for the `Student` and `Course` classes. Feel free to modify it as needed.
 
 ```cpp
 #include <bits/stdc++.h>
