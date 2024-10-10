@@ -154,11 +154,14 @@ You need to implement the following methods:
 3. `serializeCourse(Course course)` - Takes a `Course` object and returns a serialized binary string.
 4. `deserializeCourse(string binary)` - Takes a serialized binary string and returns the original `Course` object.
 
-### Input Format:
-- The first word of each line will be either `serialize` or `deserialize`.
-- If the command is `serialize`, the next word will be the class name (`Student` or `Course`), followed by the class variables:
+## Input Format:
+- The input will contain only one line.
+- The first word will be either `serialize` or `deserialize`.
+  
+- If the command is `serialize`, the next word will be the class name (`Student` or `Course`), followed by the class variable values:
   - For `Student`: `name`, `rollNumber`, `dob`.
   - For `Course`: `ID`, `noOfRegisteredStudents`, `averageMarks`.
+
 - If the command is `deserialize`, the next word will be the class name (`Student` or `Course`), followed by the serialized binary string.
 
 ## Output Format:
