@@ -199,3 +199,57 @@ deserialize Course 0000011001000011010100110011011000110001001101010011000000000
 ```
 CS6150 60 63.5
 ```
+
+## Template
+You can use the following C++ template to implement serialization and deserialization for the `Student` and `Course` classes. Feel free to modify it as needed.
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+class Student {
+    private:
+        string name;
+        string rollNumber;
+        string dob;
+    
+    public:
+        Student(string _name, string _rollNumber, string _dob) {
+            //Regular constructor
+        }
+        
+        Student(string bitStream) {
+            //Overloaded constructor for deserialization
+            //Implement deserialization to initialize class varialbes
+        }
+        
+        string serialize() {
+            //Implement serialization
+        }
+};
+
+class Course {
+    private:
+        string ID;
+        unsigned int noOfRegisteredStudents;
+        float averageMarks;
+    
+    public:
+        Course(string _ID, unsigned int _noOfRegisteredStudents, float _averageMarks) {
+            //Regular constructor
+        }
+        
+        Course(string bitStream) {
+            //Overloaded constructor for deserialization
+            //Implement deserialization to initialize class varialbes
+        }
+        
+        string serialize() {
+            //Implement serialization
+        }
+};
+
+int main() {
+    
+}
+```
