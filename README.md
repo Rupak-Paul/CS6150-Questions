@@ -119,11 +119,11 @@ Serialized ID:
 ```
 2. Serialize `noOfRegisteredStudents`:
 ```
-00000000000000000000000000111100 (underlying bit pattern of `noOfRegisteredStudents`)
+00000000000000000000000000111100 (underlying bit pattern of noOfRegisteredStudents)
 ```
 3. Serialize `averageMarks`:
 ```
-01000010011111100000000000000000 (underlying bit pattern (IEEE 754) of `averageMarks`)
+01000010011111100000000000000000 (underlying bit pattern (IEEE 754) of averageMarks)
 ```
 4. The final serialized output in binary will be:
 ```
