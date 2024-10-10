@@ -137,10 +137,10 @@ Serialized ID:
 ```
 2. The deserialization process involves the following steps:
 ```
-1. Read the first byte to get the size of `ID` (6).
-2. Read the next 6 bytes to get `ID` (CS6150).
-3. Read the next 4 bytes directly as `noOfRegisteredStudents` (60).
-4. Read the next 4 bytes directly as `averageMarks` (63.5).
+1. Read the first byte to get the size of ID (6).
+2. Read the next 6 bytes to get ID (CS6150).
+3. Read the next 4 bytes directly as noOfRegisteredStudents (60).
+4. Read the next 4 bytes directly as averageMarks (63.5).
 ```
 3. The final output after deserialization will be:
 ```
