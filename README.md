@@ -90,8 +90,7 @@ The `Course` class contains the following variables:
 
 The serialization process involves the following steps:
 - For the `ID`, write the size of the string in bytes using 1 byte (since the size of `ID` will always be ≤ 255), followed by the actual string data.
-- Directly serialize `noOfRegisteredStudents` and `averageMarks` as they have fixed sizes.
-- **Note:** You do not need to compute the IEEE 754 representation of `averageMarks`. Instead, access the bit pattern directly using bitwise operators.
+- Directly write the underlying bit pattern of `noOfRegisteredStudents` and `averageMarks` as they have fixed sizes.
 
 ### Example:
 Given a `Course` object with:
@@ -104,7 +103,8 @@ averageMarks = 63.5
 **Serialization Steps:**
 1. Serialize `ID`:
 ```
-Size of `ID`: 6 (binary: `00000110`)
+Size of `ID` in bytes:
+00000110 (6)
 
 ASCII values of `C`, `S`, `6`, `1`, `5`, `0`:
 C -> 01000011
@@ -113,42 +113,39 @@ S -> 01010011
 1 -> 00110001
 5 -> 00110101
 0 -> 00110000
-```
 
-3. Serialize `noOfRegisteredStudents` (60):
+Serialized ID:
+00000110010000110101001100110110001100010011010100110000
 ```
-Binary: 00000000000000000000000000111100
+2. Serialize `noOfRegisteredStudents` (60):
 ```
-
-4. Serialize `averageMarks` (63.5):
+00000000000000000000000000111100 (underlying bit pattern of `noOfRegisteredStudents`)
 ```
-Binary in IEEE 754 format (accessed directly): 01000001011111100000000000000000
+3. Serialize `averageMarks` (63.5):
 ```
-
-5. The final serialized output in binary will be:
+01000010011111100000000000000000 (underlying bit pattern (IEEE 754) of `averageMarks`)
 ```
-00000110 01000011 01010011 00110110 00110001 00110101 00110000 00000000000000000000000000111100 01000001011111100000000000000000
+4. The final serialized output in binary will be:
 ```
-
+000001100100001101010011001101100011000100110101001100000000000000000000000000000011110001000010011111100000000000000000
+```
 
 **Deserialization Steps:**
 1. Given a serialized binary string:
 ```
-00000110 01000011 01010011 00110110 00110001 00110101 00110000 00000000000000000000000000111100 01000001011111100000000000000000
+000001100100001101010011001101100011000100110101001100000000000000000000000000000011110001000010011111100000000000000000
 ```
-2. The deserialization process involves reading the size of the `ID` and extracting the respective values:
+2. The deserialization process involves the following steps:
 ```
-1. Read the first byte to get the size of `ID` (6 bytes).
-2. Read the next 6 bytes to get `ID` (`CS6150`).
+1. Read the first byte to get the size of `ID` (6).
+2. Read the next 6 bytes to get `ID` (CS6150).
 3. Read the next 4 bytes directly as `noOfRegisteredStudents` (60).
 4. Read the next 4 bytes directly as `averageMarks` (63.5).
 ```
-
-The final output after deserialization will be:
+3. The final output after deserialization will be:
 ```
 CS6150 60 63.5
 ```
-
 
 ## Tasks:
 You need to implement the following methods:
