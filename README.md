@@ -8,6 +8,7 @@ You have an object of a class, and you want to either store that object permanen
 In this assignment, you are required to implement serialization and deserialization methods for two classes: Student and Course. The goal is to encode the data of objects from these classes into a binary string format and then decode them back into objects.
 
 - Class **`Student`** contains only `string` variables, making its serialization straightforward.
+
 - Class **`Course`** contains variables of different data types: `string`, `int`, and `float`, requiring a more elaborate serialization method.
 
 ## Serialization of Student:
@@ -18,6 +19,7 @@ The `Student` class contains the following `string` variables:
 
 Since all class variables are of type `string`, we can use a simple serialization method:
 - Concatenate the variables using the `$` character as a delimiter.
+
 - Convert the concatenated string into a binary format by transforming each character into its ASCII binary representation.
 
 ### Example:
@@ -90,6 +92,7 @@ The `Course` class contains the following variables:
 
 The serialization process involves the following steps:
 - For the `ID`, write the size of the string in bytes using 1 byte (since the size of `ID` will always be ≤ 255), followed by the actual string data.
+
 - Directly write the underlying bit pattern of `noOfRegisteredStudents` and `averageMarks` as they have fixed sizes.
 
 ### Example:
@@ -156,6 +159,7 @@ You need to implement the following methods:
 
 ## Input Format:
 - The input will contain only one line.
+
 - The first word will be either `serialize` or `deserialize`.
   
 - If the command is `serialize`, the next word will be the class name (`Student` or `Course`), followed by the class variable values:
@@ -166,6 +170,7 @@ You need to implement the following methods:
 
 ## Output Format:
 - For serialization, the output will be the serialized representation in binary format (a string of `0`s and `1`s).
+
 - For deserialization, the output will be the contents of the class variables in the original order, separated by spaces.
 
 ## Sample Inputs and Outputs
