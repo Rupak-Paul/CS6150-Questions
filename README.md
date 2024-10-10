@@ -200,8 +200,8 @@ deserialize Course 0000011001000011010100110011011000110001001101010011000000000
 CS6150 60 63.5
 ```
 
-## Template
-You can use the following template to implement serialization and deserialization for the `Student` and `Course` classes. Feel free to modify it as needed.
+## Note
+- You can use the following template to implement serialization and deserialization for the `Student` and `Course` classes. Feel free to modify it as needed.
 
 ```cpp
 #include <bits/stdc++.h>
