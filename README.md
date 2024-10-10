@@ -117,11 +117,11 @@ S -> 01010011
 Serialized ID:
 00000110010000110101001100110110001100010011010100110000
 ```
-2. Serialize `noOfRegisteredStudents` (60):
+2. Serialize `noOfRegisteredStudents`:
 ```
 00000000000000000000000000111100 (underlying bit pattern of `noOfRegisteredStudents`)
 ```
-3. Serialize `averageMarks` (63.5):
+3. Serialize `averageMarks`:
 ```
 01000010011111100000000000000000 (underlying bit pattern (IEEE 754) of `averageMarks`)
 ```
