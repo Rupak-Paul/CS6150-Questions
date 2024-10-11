@@ -10,9 +10,9 @@ If it is possible to reach one or both hospitals, the algorithm should output th
 
 ## Input Format
 
-- The first line contains two integers `n` and `m` (1 ≤ `n`, `m` ≤ 1000), representing the number of rows and columns in the grid.
+- The first line contains two integers `n` and `m`, representing the number of rows and columns in the grid.
 
-- The next `n` lines each contain `m` characters, representing the grid layout. Each character in the grid can be one of the following:
+- The next `n` lines each contain `m` strings separated by spaces, representing the grid layout. Each strings in the grid can be one of the following:
   - `.`: an accessible area.
 
   - `#`: a blocked area.
@@ -37,11 +37,11 @@ If it is possible to reach one or both hospitals, the algorithm should output th
 ### Input
 ```
 5 5
-.....
-..#..
-.H1#.
-..X..
-.H2..
+. . . . .
+. . # . .
+. H1 # . .
+. . X . .
+. H2 . . .
 ```
 
 ### Output
