@@ -30,7 +30,7 @@ If it is possible to reach one or both hospitals, the algorithm should output th
 - If both hospitals are unreachable, print `-1`.
 
 ## Constraints
-- 1 ≤ n, m ≤ 1000
+- 2 ≤ n, m ≤ 1000
 
 ## Example
 
