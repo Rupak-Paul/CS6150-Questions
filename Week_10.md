@@ -51,4 +51,3 @@ H2 6
 
 ### Explanation
 In this example, the nearest hospital is `H2`, located at position (4, 1). It takes 6 minutes to reach `H2` from your current location, `X`, at position (3, 3). Therefore, the algorithm outputs `H2 6`.
-"""
