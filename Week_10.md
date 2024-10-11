@@ -30,8 +30,6 @@ If it is possible to reach one or more hospitals, the algorithm should output th
 ## Constraints
 - 2 ≤ n, m ≤ 1000
 
-- The number of hospitals `H` must be `<= 10`.
-
 ## Example
 
 ### Input
