@@ -4,7 +4,7 @@ As a student at IIT Madras, you are part of a project to develop a hospital reco
 
 The campus is represented as an `n x m` grid, where each cell represents a specific area. Some areas are accessible (represented by `.`), while others are blocked due to construction or safety reasons (represented by `#`). There are two hospitals on campus, marked as `H1` and `H2` in the grid. Your current location on campus can be fetched using GPS and represented as `X` in the grid.
 
-You can move between accessible areas, Going from one location to an adjacent location takes exactly **2 minutes**. Your task is to help the developers by writing an algorithm that determines which hospital, `H1` or `H2`, is closer from your current location `X`, and calculates the minimum time required to reach it.
+You can move between accessible areas, Going from one location to an adjacent location takes approximately **2 minutes**. Your task is to help the developers by writing an algorithm that determines which hospital, `H1` or `H2`, is closer from your current location `X`, and calculates the minimum time required to reach it.
 
 If it is possible to reach one or both hospitals, the algorithm should output the name of the closest hospital (`H1` or `H2`) and the minimum time taken to reach it. If both hospitals are equidistant, prioritize `H1`. If neither hospital can be reached, return `-1`.
 
