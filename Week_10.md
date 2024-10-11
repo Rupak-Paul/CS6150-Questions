@@ -1,49 +1,54 @@
+# Hospital Recommendation Application
 
-# Choosing the Quickest Route to a Hospital at IIT Madras
+As a student at IIT Madras, you are part of a project to develop a hospital recommendation application for the campus. The app is designed to assist students, faculty, and staff in quickly finding the nearest hospital during medical emergencies. Due to ongoing infrastructure repairs, construction, and landscaping projects, some pathways on campus are blocked, making it important to navigate efficiently.
 
-You are a student at IIT Madras, studying late at night in the CSE Department when one of your classmates suddenly faints. Realizing the seriousness of the situation, you need to rush to the nearest hospital to get medical assistance. Fortunately, you have access to the **campus map**, which shows open pathways and areas blocked due to ongoing **construction, maintenance work, and landscaping projects**.
+The campus is represented as an `n x m` grid, where each cell represents a specific area. Some areas are accessible (represented by `.`), while others are blocked due to construction or safety reasons (represented by `#`). There are two hospitals on campus, marked as `H1` and `H2` in the grid. Your current location on campus can be fetched using GPS and represented as `X` in the grid.
 
-The campus is modeled as an `n x m` grid, where each cell represents a specific area. Some areas are accessible (represented by `.`), while others are blocked off (represented by `#`). These blockages result from **infrastructure repairs, ongoing building work, or restricted zones** for safety reasons. You can move between adjacent accessible locations, and **going from one location to its adjacent location takes 2 minutes**.
+You can move between accessible areas, Going from one location to an adjacent location takes exactly **2 minutes**. Your task is to help the developers by writing an algorithm that determines which hospital, `H1` or `H2`, is closer from your current location `X`, and calculates the minimum time required to reach it.
 
-There are **two hospitals** on campus, and you must decide which one you can reach faster. Your task is to find the **minimum time required** to reach the **nearest hospital** from your position in the CSE building. If both hospitals are unreachable, return `-1`. Additionally, you need to provide the coordinates of the hospital that can be reached faster along with the time taken.
+If it is possible to reach one or both hospitals, the algorithm should output the name of the closest hospital (`H1` or `H2`) and the minimum time taken to reach it. If both hospitals are equidistant, prioritize `H1`. If neither hospital can be reached, return `-1`.
 
-## Input:
+## Input Format
 
-- The first line contains two integers `n` and `m` — the number of rows and columns in the campus grid.
+- The first line contains two integers `n` and `m` (1 ≤ `n`, `m` ≤ 1000), representing the number of rows and columns in the grid.
 
-- The next `n` lines each contain a string of `m` characters, where `.` represents an open path and `#` represents a blocked path.
+- The next `n` lines each contain `m` characters, representing the grid layout. Each character in the grid can be one of the following:
+  - `.`: an accessible area.
 
-- The following line contains six integers: `sx`, `sy`, `hx1`, `hy1`, `hx2`, `hy2` — the coordinates of your starting position `(sx, sy)` in the CSE building and the coordinates of the two hospitals `(hx1, hy1)` and `(hx2, hy2)`.
+  - `#`: a blocked area.
 
-## Output:
+  - `H1`: the location of the first hospital.
 
-- Output the minimum time (in minutes) required to reach the nearest hospital. If both hospitals are unreachable, print `-1`. If one or both hospitals are reachable, print the time taken and the coordinates of the nearest hospital in the format: `time hx, hy`.
+  - `H2`: the location of the second hospital.
 
-## Constraints:
-- `1 ≤ n, m ≤ 1000`
+  - `X`: your current location, fetched via GPS.
 
-- `1 ≤ sx, sy, hx1, hy1, hx2, hy2 ≤ n, m`
+## Output Format
 
-- The start and hospital points are guaranteed to be nonblocked areas.
+- If it is possible to reach one or both hospitals, print the name of the nearest hospital (`H1` or `H2`) followed by the minimum time (in minutes) to reach it, as two space-separated values.
 
-## Example:
+- If both hospitals are unreachable, print `-1`.
 
-### Input:
+## Constraints
+- 1 ≤ n, m ≤ 1000
+
+## Example
+
+### Input
 ```
-6 7
-.......
-.#..#..
-.#..#..
-.......
-.####..
-.......
-1 1 6 3 6 7
+5 5
+.....
+..#..
+.H1#.
+..X..
+.H2..
 ```
 
-### Output:
+### Output
 ```
-10 6 7
+H2 6
 ```
 
-### Explanation:
-In this example, you start at (1,1) in the CSE building. There are two hospitals, one at (6,3) and another at (6,7). After calculating the time, you find that the quickest route to the hospital at (6,7) takes 10 minutes, while the other hospital would take longer. Thus, the output includes both the time taken and the coordinates of the nearest hospital.
+### Explanation
+In this example, the nearest hospital is `H2`, located at position (4, 1). It takes 6 minutes to reach `H2` from your current location, `X`, at position (3, 3). Therefore, the algorithm outputs `H2 6`.
+"""
