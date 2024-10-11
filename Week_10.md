@@ -46,8 +46,8 @@ If it is possible to reach one or more hospitals, the algorithm should output th
 
 ### Output
 ```
-(3, 2) 10
+(3, 2) 5
 ```
 
 ### Explanation
-In this example, the nearest hospital is located at position `(3, 2)`. It takes 10 minutes to reach this hospital from your current location, `X`, at position `(4, 3)`. Therefore, the algorithm outputs `(3, 2) 10`.
+In this example, the nearest hospital is located at position `(3, 2)`. It takes 5 minutes to reach this hospital from your current location, `X`, at position `(4, 3)`. Therefore, the algorithm outputs `(3, 2) 5`.
