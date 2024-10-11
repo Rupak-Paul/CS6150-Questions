@@ -1,4 +1,4 @@
-# Chennai City Hospital Recommendation Application
+# Hospital Recommendation App
 
 As a resident of Chennai, you are part of a project to develop a hospital recommendation application for the city. The app is designed to assist residents in quickly finding the nearest hospital during medical emergencies. Due to ongoing infrastructure projects, road repairs, and other obstacles, some paths are blocked, making it important to navigate efficiently.
 
