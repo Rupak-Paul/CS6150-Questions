@@ -47,7 +47,7 @@ If it is possible to reach one or more hospitals, the algorithm should output th
 ### Explanation 1
 In this test case, the user starts at location `(3,2)`, marked as `X` in the grid. The nearest hospital is located at `(2,1)`, marked as `H`, which can be reached in just 5 minutes, `(3,2) -> (2,1)`. There is another hospital at `(4,1)` that is also accessible and equidistant; however, the algorithm prioritizes the hospital that appears first in the grid from top to bottom and left to right. Hence, the output indicates a minimum time of **5 minutes** to reach the nearest hospital at coordinates `(2,1)`.
 
-![image]()
+![image](sampleOutput_0.png)
 
 ### Sample Input 2
 ```
@@ -91,4 +91,4 @@ In this test case, the user starts at location `(4,4)`, marked as `X` in the gri
 ### Explanation 3
 In this example, the user starts at location `(7,1)` and the nearest hospital is at `(1,8)`, which can be reached in 60 minutes. The user follows the path `(7,1) → (8,1) → (9,2) → (8,3) → (8,4) → (7,5) → (6,6) → (6,7) → (5,8) → (4,7) → (3,8) → (2,7) → (1,8)`. Each move between adjacent accessible cells takes 5 minutes, and since there are 12 moves, the total time is 60 minutes.
 
-![image]()
+![image](sampleOutput_3.png)
